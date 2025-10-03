@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: my-nginx-pod
+  name: my-nginx-pod1
   labels:
     app: my_ak8_lebel
 spec:
@@ -15,7 +15,7 @@ spec:
 apiVersion: v1
 kind: Pod
 metadata:
-  name: my-nginx-pod
+  name: my-nginx-pod2
   labels:
     app: my_ak8_lebel
 spec:
@@ -23,4 +23,5 @@ spec:
     - name: my-nginx-blue
       image: achinta1/achinta-colors:blue
       ports:
+
         - containerPort: 80
