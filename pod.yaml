@@ -6,7 +6,21 @@ metadata:
     app: my_ak8_lebel
 spec:
   containers:
-    - name: my-nginx-pod
-      image: nginx
+    - name: my-nginx-red
+      image: achinta1/achinta-colors:red
+      ports:
+        - containerPort: 80
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-nginx-pod
+  labels:
+    app: my_ak8_lebel
+spec:
+  containers:
+    - name: my-nginx-blue
+      image: achinta1/achinta-colors:blue
       ports:
         - containerPort: 80
